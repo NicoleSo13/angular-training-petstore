@@ -1,0 +1,42 @@
+<section id = "orders-list" class="orders-card">
+  <div class="orders-card-header">
+    <h2>Orders</h2>
+  </div>
+
+  @if (orders.length > 0) {
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Pet ID</th>
+          <th>Pet Name</th>
+          <th>Quantity</th>
+          <th>Status</th>
+          <th>Ship Date</th>
+          <th>Customer</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (order of orders; track order.id) {
+          <tr>
+            <td>#{{ order.id }}</td>
+            <td>{{ order.petId }}</td>
+            <td>{{ order.petName }}</td>
+            <td>{{ order.quantity }}</td>
+            <td>
+                <span class="status-badge"
+                [class.status-approved]="order.status === 'approved'"
+                [class.status-placed]="order.status === 'placed'">
+                    {{ order.status }}
+                </span>
+            </td>
+            <td>{{ order.shipDate }}</td>
+            <td>{{ order.customer }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  } @else {
+    <p class="orders-empty">No orders found.</p>
+  }
+</section>

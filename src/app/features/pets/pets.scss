@@ -1,0 +1,87 @@
+.pets-card {
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.pets-card-header {
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-tertiary);
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.pets-card-header h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.create-user-button {
+  background: #ba7517;
+  border: 1px solid #ba7517;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 6px 12px;
+}
+
+.create-user-button:hover {
+  background: #854f0b;
+  border-color: #854f0b;
+}
+
+.pets-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.pets-table th {
+  background: var(--color-background-secondary);
+  border-bottom: 1px solid var(--color-border-tertiary);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.pets-table td {
+  border-bottom: 1px solid var(--color-border-tertiary);
+  font-size: 13px;
+  padding: 10px 12px;
+}
+
+.pets-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.status-badge {
+  background: #e1f5ee;
+  border-radius: 999px;
+  color: #0f6e56;
+  display: inline-flex;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  text-transform: capitalize;
+}
+
+.status-badge.status-pending {
+  background: #fff4e5;
+  color: #d97706;
+}
+
+.status-badge.status-sold {
+  background: #fcebeb;
+  color: #e24b4a;
+}
+
+.pets-empty {
+  color: var(--color-text-secondary);
+  margin: 0;
+  padding: 20px 16px;
+}

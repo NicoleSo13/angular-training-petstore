@@ -1,0 +1,42 @@
+<section id = "pets-list" class="pets-card">
+  <div class="pets-card-header">
+    <h2>Pets</h2>
+  </div>
+
+  @if (pets.length > 0) {
+    <table class="pets-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Status</th>
+          <th>Emoji</th>
+          <th>Tags</th>
+          <th>Photos</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (pet of pets; track pet.id) {
+          <tr>
+            <td>#{{ pet.id }}</td>
+            <td>{{ pet.name }}</td>
+            <td>{{ pet.category }}</td>
+            <td>
+                <span class="status-badge"
+                [class.status-pending]="pet.status === 'pending'"
+                [class.status-sold]="pet.status === 'sold'">
+                    {{ pet.status }}
+                </span>
+            </td>
+            <td>{{ pet.emoji }}</td>
+            <td>{{ pet.tags }}</td>
+            <td>{{ pet.photos }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  } @else {
+    <p class="pets-empty">No pets found.</p>
+  }
+</section>

@@ -11,11 +11,11 @@ type User = {
 };
 
 @Component({
-  selector: 'app-users-list',
-  templateUrl: './users-list.html',
-  styleUrl: './users-list.scss',
+  selector: 'app-users',
+  templateUrl: './users.html',
+  styleUrl: './users.scss',
 })
-export class UsersList {
+export class Users {
   protected readonly users: User[] = [
     {
       id: 1,
@@ -65,3 +65,14 @@ export class UsersList {
   ];
 
 }
+
+// To be deleted later, after we decide if we keep new or old user list format
+// export class Users {
+//     protected readonly users: User[] = [
+//         {id:1,username:'johndoe',firstName:'John',lastName:'Doe',email:'john@petstore.io',phone:'+1-555-0101',userStatus:1,role:'Admin'},
+//         {id:2,username:'alicemoss',firstName:'Alice',lastName:'Moss',email:'alice@petstore.io',phone:'+1-555-0102',userStatus:1,role:'Staff'},
+//         {id:3,username:'bobkane',firstName:'Bob',lastName:'Kane',email:'bob@petstore.io',phone:'+1-555-0103',userStatus:0,role:'Staff'},
+//         {id:4,username:'carolsmith',firstName:'Carol',lastName:'Smith',email:'carol@petstore.io',phone:'+1-555-0104',userStatus:1,role:'Customer'},
+//         {id:5,username:'davelee',firstName:'Dave',lastName:'Lee',email:'dave@petstore.io',phone:'+1-555-0105',userStatus:1,role:'Customer'},
+//     ]
+// }
